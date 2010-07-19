@@ -1,4 +1,4 @@
-#直接操作IO端口
+# 直接操作IO端口
 
 = GPIO到文件系统的映射 =
 
@@ -11,7 +11,6 @@
 
  * 首先计算此引脚编号，引脚编号 = 控制引脚的寄存器基数 + 控制引脚寄存器位数
  * 向/sys/class/gpio/export写入此编号，比如12号引脚，在shell中可以通过以下命令实现，命令成功后生成/sys/class/gpio/gpio12目录：
-
 {{{
 echo 12 > /sys/class/gpio/export
 }}}
