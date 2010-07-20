@@ -1,0 +1,9 @@
+#summary iptables移植
+
+./configure --prefix=[arm-filesys-home] --host=arm-none-linux-gnueabi --disable-shared LDFLAGS='-march=armv4t -mcpu=arm920t'  CFLAGS='-march=armv4t -mcpu=arm920t'
+
+make
+
+make install
+
+make install如粗错，修改libtool的ranlib路径
