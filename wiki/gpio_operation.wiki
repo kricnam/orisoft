@@ -1,4 +1,4 @@
-#summary 直接操作IO端口
+#summary 通过/sys/文件接口操作IO端口
 
 == GPIO到文件系统的映射 ==
 
