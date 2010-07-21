@@ -6,4 +6,4 @@ make
 
 make install
 
-make install如粗错，修改libtool的ranlib路径
+make install如出错，修改libtool的ranlib路径
