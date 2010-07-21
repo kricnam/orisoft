@@ -1,4 +1,4 @@
-#summary iptables移植
+#summary iptables 1.4.8 移植
 
 ./configure --prefix=[arm-filesys-home] --host=arm-none-linux-gnueabi --disable-shared LDFLAGS='-march=armv4t -mcpu=arm920t'  CFLAGS='-march=armv4t -mcpu=arm920t'
 
