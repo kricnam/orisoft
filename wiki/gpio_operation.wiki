@@ -1,4 +1,5 @@
 #summary 通过/sys/文件接口操作IO端口
+#labels Phase-Implementation
 
 == GPIO到文件系统的映射 ==
 
