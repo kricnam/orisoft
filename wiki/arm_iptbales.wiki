@@ -1,17 +1,17 @@
 #summary iptables  移植
 
-1.4.8
+*1.4.8*
 
 ./configure --prefix=[arm-filesys-root] --host=arm-none-linux-gnueabi --disable-shared LDFLAGS='-march=armv4t -mcpu=arm920t'  CFLAGS='-march=armv4t -mcpu=arm920t'
 
-修改Makefile,和1.4.8相同
+修改Makefile,和1.4.5相同
 make
 
 make install
 
 make install如出错，修改libtool的ranlib路径
 
-1.4.5
+*1.4.5*
 
 ./configure --prefix=[arm-filesys-root] --host=arm-none-linux-gnueabi  LDFLAGS='-march=armv4t -mcpu=arm920t'  CFLAGS='-march=armv4t -mcpu=arm920t'
 
