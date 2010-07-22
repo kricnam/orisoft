@@ -1,4 +1,4 @@
-#summary iptables  移植
+#summary iptables  移植到S3C2440 CPU
 
 
 *1.4.5*
