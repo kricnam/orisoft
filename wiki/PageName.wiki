@@ -1,0 +1,5 @@
+#subjetc video data
+
+352x288 4098152byte 15s 
+15MB/min
+266KB/s
