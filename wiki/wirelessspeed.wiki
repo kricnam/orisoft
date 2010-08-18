@@ -1,0 +1,6 @@
+#summary 无线通讯速度测试
+
+||制式||下载||上传||
+||TD-SCDMA||约330kpbs||？||
+||CDMA2000||约1Mkbps||200Kbps||
+||WCDMA||约500kpbs||?||
