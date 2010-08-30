@@ -1,4 +1,4 @@
-#summary TCPDUMP4.1.1移植
+#summary TCPDUMP4.1.1移植，目标机器ARM920t
 _编译前，请确认交叉编译器arm-none-linux-gnueabi-gcc在可执行文件的搜索路径中_
 
 
@@ -49,7 +49,7 @@ tar -xvzf tcpdump-4.1.1.tar.gz
 {{{
 ./configure --host=arm-none-linux-gnueabi
 }}}
-* 4 修改Makefile，在LDFLAGS，和CFLAGS设置中加入-march=armv4t -mcpu=arm920t
+* 4 修改Makefile，在LDFLAGS，和CFLAGS设置中加入CPU代码开关：-march=armv4t -mcpu=arm920t
 
 * 5 执行make命令
 
@@ -77,7 +77,7 @@ tar -xvzf tcpdump-4.1.1.tar.gz
 {{{
 ./configure --host=arm-none-linux-gnueabi
 }}}
-* 8 修改Makefile，修改以下几项参数的内容如下：
+* 8 修改Makefile，增加编译CPU代码开关，并去掉错误的头文件搜索路径，修改的几项参数的结果如下：
 {{{
 INCLS = -I. -I./../libpcap-1.1.1  -I$(srcdir)/missing
 DEFS = -DHAVE_CONFIG_H  -I./../libpcap-1.1.1  -I$(srcdir)/missing  -D_U_="__attribute__((unused))"
