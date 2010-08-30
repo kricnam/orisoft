@@ -1,5 +1,5 @@
-#summary TCPDUMP移植
-_编译前，请确认编译arm-none-linux-gnueabi-gcc在可执行文件的搜索路径中_
+#summary TCPDUMP4.1.1移植
+_编译前，请确认交叉编译器arm-none-linux-gnueabi-gcc在可执行文件的搜索路径中_
 
 
 
