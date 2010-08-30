@@ -11,8 +11,7 @@ Do you want to take inventory (y|n) [y]?
 Do you want to customize (y|n) [y]? n
 }}}
 选n
- * 修改生成的Makefile
-
+ * 修改生成的Makefile,将以下几项改为所示的内容
 {{{
 CC=	/usr/local/arm/4.4.1/bin/arm-none-linux-gnueabi-gcc 
  
