@@ -1,0 +1,11 @@
+#summary openssl移植
+
+* 编译环境配置
+{{{
+MACHINE=arm-l-linux2 CC=arm-none-linux-gnueabi-gcc ./config shared no-krb5 --prefix=/usr
+}}}
+* make
+* 安装,将相关文件安装在tmp目录中
+{{{
+make INSTALL_PREFIX=/tmp install
+}}}
