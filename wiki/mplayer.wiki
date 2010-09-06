@@ -37,6 +37,11 @@ make INSTALL_PREFIX=/tmp install
 {{{
 CC=arm-none-linux-gnueabi-gcc ./configure --prefix=/usr
 }}}
+  * 修改Makefile中ssl连接库的位置
+{{{
+OPENSSL_CFLAGS = -I/tmp/usr/kerberos/include
+OPENSSL_LIBS = -L/tmp/usr/kerberos/lib -lssl -lcrypto -ldl -lz
+}}}
   * Make
 {{{
 make CFLAGS='-march=armv4t -mcpu=arm920t -I/tmp/usr/include' LDFLAGS='-march=armv4t -mcpu=arm920t -L/tmp/usr/lib'
