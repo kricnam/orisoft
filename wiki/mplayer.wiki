@@ -6,7 +6,7 @@
 {{{
 CC=arm-none-linux-gnueabi-gcc ./configure --prefix=/usr
 }}}
-  *修改Makefile，在以下变量处加入处理器选项
+  * 修改Makefile，在以下变量处加入处理器选项
 {{{
 CFLAGS=-O3 -D_LARGEFILE64_SOURCE=1 -march=armv4t -mcpu=arm920t
 LDFLAGS= -L. libz.a -march=armv4t -mcpu=arm920t
