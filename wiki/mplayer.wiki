@@ -1,0 +1,58 @@
+#summary mplayer移植
+
+ # 具有RTCP客户端的mplayer依赖libnemesi->libnetembryo->libssl->libz
+ # zlib-1.2.5编译
+  * 配置
+{{{
+CC=arm-none-linux-gnueabi-gcc ./configure --prefix=/usr
+}}}
+  * Make
+  * 安装
+{{{
+make DESTDIR=/tmp install
+}}}
+ # openssl-0.9.8o编译
+  * 配置
+{{{
+MACHINE=arm-l-linux2 CC=arm-none-linux-gnueabi-gcc ./config shared no-krb5 --prefix=/usr
+}}}
+  * Make
+  * 安装
+{{{
+make INSTALL_PREFIX=/tmp install
+}}}
+ # netembryo-0.1.1编译
+  * 配置
+{{{
+CC=arm-none-linux-gnueabi-gcc ./configure --prefix=/usr
+}}}
+  * Make
+{{{
+make CFLAGS='-march=armv4t -mcpu=arm920t -I/tmp/usr/include' LDFLAGS='-march=armv4t -mcpu=arm920t -L/tmp/usr/lib'
+}}}
+  * 安装
+{{{
+make DESTDIR=/tmp install
+}}}
+ # libnemesi-master编译
+  * 配置。如果configue过程出错，根据提示添加缺少的配置项
+{{{
+autoreconf --install
+./configure PKG_CONFIG_PATH=/tmp/usr/lib/pkgconfig CFLAGS='-march=armv4t -mcpu=arm920t -I/tmp/usr/include' LDFLAGS='-ma
+rch=armv4t -mcpu=arm920t -L/tmp/usr/lib' --host=arm-none-linux-gnueabi
+}}}
+  * 修改/tmp/usr/lib中la文件中的路径配置为/tmp起始
+  * Make
+  * 安装
+{{{
+make DESTDIR=/tmp install
+}}}
+ # mplayer-checkout-2010-06-28编译配置
+{{{
+./configure  --target=arm-linux --enable-cross-compile --cc=arm-none-linux-gnueabi-gcc --prefix=/usr  --extra-cflags='-march=armv4t -mcpu=arm920t -I/tmp/usr/include' --extra-ldflags='-march=armv4t -mcpu=arm920t -L/tmp/usr/lib' --enable-nemesi --extra-libs-mplayer='-lnemesi -lnetembryo -lssl -lcrypto -lz'
+}}}
+  * Make
+  * 安装。编译完成的程序安装在/tmp目录下，然后拷贝到目标机
+{{{
+make DESTDIR=/tmp INSTALLSTRIP=  install
+}}}
