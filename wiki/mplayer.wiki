@@ -54,8 +54,7 @@ make DESTDIR=/tmp install
   * 配置。如果configue过程出错，根据提示添加缺少的配置项
 {{{
 autoreconf --install
-./configure PKG_CONFIG_PATH=/tmp/usr/lib/pkgconfig CFLAGS='-march=armv4t -mcpu=arm920t -I/tmp/usr/include' LDFLAGS='-ma
-rch=armv4t -mcpu=arm920t -L/tmp/usr/lib' --host=arm-none-linux-gnueabi
+./configure PKG_CONFIG_PATH=/tmp/usr/lib/pkgconfig CFLAGS='-march=armv4t -mcpu=arm920t -I/tmp/usr/include' LDFLAGS='-march=armv4t -mcpu=arm920t -L/tmp/usr/lib' --host=arm-none-linux-gnueabi
 }}}
   * 修改/tmp/usr/lib中la文件中的路径配置为/tmp起始
   * Make
