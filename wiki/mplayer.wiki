@@ -62,7 +62,8 @@ autoreconf --install
 {{{
 make DESTDIR=/tmp install
 }}}
- # mplayer-checkout-2010-06-28编译配置
+ # mplayer-checkout-2010-06-28
+  * 编译配置
 {{{
 ./configure  --target=arm-linux --enable-cross-compile --cc=arm-none-linux-gnueabi-gcc --prefix=/usr  --extra-cflags='-march=armv4t -mcpu=arm920t -I/tmp/usr/include' --extra-ldflags='-march=armv4t -mcpu=arm920t -L/tmp/usr/lib' --enable-nemesi --extra-libs-mplayer='-lnemesi -lnetembryo -lssl -lcrypto -lz'
 }}}
