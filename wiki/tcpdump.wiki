@@ -8,8 +8,10 @@ _编译前，请确认交叉编译器arm-none-linux-gnueabi-gcc在可执行文�
 tar -xvzf libpcap-1.1.1.tar.gz
 tar -xvzf tcpdump-4.1.1.tar.gz
 }}}
-* 2 进入libpcap-1.1.1目录，修改libpcap下的配置程序configure，注释掉两项检测，diff -u的结果如下
+* 2 进入libpcap-1.1.1目录，修改libpcap下的配置程序configure，注释掉两项检测，diff -u的结果如下，即将-号行内容改为和+号行的内容。（diff -u old new)
 {{{
+-- old
+++ new
 @@ -6898,11 +6898,11 @@
  
  else
@@ -55,6 +57,8 @@ tar -xvzf tcpdump-4.1.1.tar.gz
 
 * 6 进入tcpdump-4.1.1目录，修改tcpdump下的配置程序configure，注释掉1项检测，diff -u的结果如下
 {{{
+--old
+++new
 @@ -4408,11 +4408,11 @@
   	fi
  	{ echo "$as_me:$LINENO: result: $ac_cv_linux_vers" >&5
