@@ -1,6 +1,6 @@
 #summary mplayer移植
 
- # 具有RTCP客户端的mplayer依赖libnemesi->libnetembryo->libssl->libz
+ # 具有RTCP客户端的mplayer依赖libnemesi->libnetembryo->libssl->libz。移植思路是先将依赖的库分别编译后，安装在一个临时目录，最后编译mplayer。
  # zlib-1.2.5编译
   * 配置
 {{{
