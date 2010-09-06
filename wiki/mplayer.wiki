@@ -22,6 +22,11 @@ make DESTDIR=/tmp install
 {{{
 MACHINE=arm-l-linux2 CC=arm-none-linux-gnueabi-gcc ./config shared no-krb5 --prefix=/usr
 }}}
+  * 修改Makefile，在以下变量处加入处理器选项
+{{{
+CFLAG= -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -DL_ENDIAN -DTERMIO -O3 -fomit-frame-pointer -Wall -march=armv4t -mcpu=arm920t
+SHARED_LDFLAGS=-march=armv4t -mcpu=arm920t
+}}}
   * Make
   * 安装
 {{{
