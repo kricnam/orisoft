@@ -1,0 +1,3 @@
+#summary OPENVPN
+
+* openvpn启动前需要设置arm板时间，否则提示证书还未生效
