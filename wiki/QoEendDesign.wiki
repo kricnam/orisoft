@@ -5,7 +5,7 @@
 构造一个支持RTCP协议的视频流媒体服务器，使用支持RTCP协议的客户端播放标准媒体流，客户端播放的同时计算QoE值，并随RR报告上传给服务器。
 
 = 程序结构 =
-
+libnemesi是开源的支持RTP/RTCP协议的库，因此选择使用此库的服务器和客户端改造后即可满足要求。
 ==服务器==
 服务器采用feng, feng使用libnemesi库支持RTCP协议。
 rtcp_read_cb（src/network/rtp.c）函数可用于输出rtcp数据，修改此函数实现，使之输出网络性能参数
@@ -21,7 +21,7 @@ RTP数据流->libnemesi->视频流->解码库->输出到输出设备
                  |
 RTCP报告  <-------
 }}}
-mplayer支持到文件的输出，和YUV4MPEG格式可供计算QoE。（-vo yuv4mpeg选项）
+mplayer支持到文件输出，和YUV4MPEG格式，可供计算QoE。（-vo yuv4mpeg选项）
 
 改造mplayer的处理流程为
 {{{
@@ -30,6 +30,8 @@ RTP数据流->libnemesi->视频流->解码库->输出到QoE计算函数
                |  |                            |
 RTCP报告  <-----  ------------- QoE <-----------             
 }}}
+
+改造在yuv4mpeg输出函数，增加调用计算QoE的功能。
 
 改造QoE计算函数，实现递推计算，并将计算结果保存在共享内存中。
 
