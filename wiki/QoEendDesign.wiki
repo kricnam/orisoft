@@ -31,7 +31,7 @@ RTP数据流->libnemesi->视频流->解码库->输出到QoE计算函数
 RTCP报告  <-----  ------------- QoE <-----------             
 }}}
 
-改造在yuv4mpeg输出函数，增加调用计算QoE的功能。
+改造在yuv4mpeg帧输出函数draw_slice（？libvo/vo_yuv4mpeg.c），增加调用计算QoE的功能。
 
 改造QoE计算函数，实现递推计算，形如：
 
