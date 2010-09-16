@@ -8,7 +8,7 @@
 libnemesi是开源的支持RTP/RTCP协议的库，因此选择使用此库的服务器和客户端改造后即可满足要求。
 ==服务器==
 服务器采用feng, feng使用libnemesi库支持RTCP协议。
-rtcp_read_cb（src/network/rtp.c）函数可用于输出rtcp数据，修改此函数实现，使之输出网络性能参数
+_rtcp_read_cb()_（src/network/rtp.c）函数可用于输出rtcp数据，修改此函数实现，使之输出网络性能参数
 
 ==客户端==
 客户端采用mplayer。
@@ -31,7 +31,7 @@ RTP数据流->libnemesi->视频流->解码库->输出到QoE计算函数
 RTCP报告  <-----  ------------- QoE <-----------             
 }}}
 
-改造在yuv4mpeg帧输出函数draw_slice（？libvo/vo_yuv4mpeg.c），增加计算QoE的功能。
+改造在yuv4mpeg帧输出函数_draw_slice()_（？libvo/vo_yuv4mpeg.c），增加计算QoE的功能。
 
 改造QoE计算函数，实现递推计算，形如：
 
