@@ -16,19 +16,19 @@ mplayer可以使用libnemesi库实现对RTP/RTCP的支持。
 
 mplayer处理流程
 {{{
-RTP数据流->libnemesi->视频流->解码库->输出到输出设备
+_RTP数据流_->libnemesi->_视频流_->解码库->_视频帧_
                  |
                  |
-RTCP报告  <-------
+_RTCP报告_  <----
 }}}
 mplayer支持到文件输出，和YUV4MPEG格式，可供计算QoE。（-vo yuv4mpeg选项）
 
 改造mplayer的处理流程为
 {{{
-RTP数据流->libnemesi->视频流->解码库->输出到QoE计算函数
-               |  ^                            |            
-               |  |                            |
-RTCP报告  <-----  ------------- QoE <-----------             
+_RTP数据流_->libnemesi->_视频流_->解码库->_视频帧_-->QoE计算函数
+               |  ^                                      |            
+               |  |                                      |
+_RTCP报告_ <----  ------------- _QoE_ <-------------------            
 }}}
 
 改造在yuv4mpeg帧输出函数_draw_slice()_（？libvo/vo_yuv4mpeg.c），增加计算QoE的功能。
