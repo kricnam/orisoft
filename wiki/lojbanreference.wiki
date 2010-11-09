@@ -1,5 +1,9 @@
 #summary LOJAN语法参考
 
+= 在逻辑斯坦的丛林中披荆斩棘：关于Lojban =
+
+==Lojban是什么==
+
 Lojban（发音【LOZH -bahn】）是一种人造语言。它的前身被称为Loglan，是库克.詹姆斯布朗博士于1955年创立的Loglan项目的语言发展的。1960年6月的《科学美国人》中，名为《loglan》的文章首次描述了这个语言的目标。 Loglan由此，以及在科幻小说（最著名的是Robert Heinleind的《Moon Is A Harsh Mistress》）和计算机出版物中不时被引用而出名。在几十位工作者和数百位支持者的工作下，loglan和lojban经历了40年构建，从1987年起由逻辑语言组（The Logical Language Group）领导这项工作。
 
 已经有成千上万的人造语言（世界语是其中最有名的），但Loglan / Lojban经过精心设计而具有它独特的特性。 以下是Lojban的主要特点：
