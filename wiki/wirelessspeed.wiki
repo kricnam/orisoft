@@ -4,10 +4,13 @@
 ||TD-SCDMA||约330kpbs||？||
 ||CDMA2000||约1Mkbps||200Kbps||
 ||WCDMA||约100～500kpbs||约70kbps||
+{{{
 
-[root@OriSoft-WCDMA ppp]# time wget http:///tmp/a.pdf ; rm a.pdf
-Connecting to 
+WCDMA# time wget http:///tmp/a.pdf ; rm a.pdf
+
 a.pdf                100% |*******************************|   435k --:--:-- ETA
+
+
 real	0m 20.72s
 user	0m 0.08s
 sys	0m 0.54s
@@ -25,8 +28,8 @@ user	0m 0.05s
 sys	0m 0.92s
 
 
-root@OriSoft TD-SCDMA /]# time wget http:///tmp/a.pdf ;rm a.pdf
-Connecting to 
+TD-SCDMA# time wget http:///tmp/a.pdf ;rm a.pdf
+
 a.pdf                100% |*******************************|   435k --:--:-- ETA
 real	0m 15.82s
 user	0m 0.05s
@@ -35,3 +38,5 @@ sys	0m 0.48s
 real	0m 12.55s
 user	0m 0.10s
 sys	0m 0.71s
+
+}}}
