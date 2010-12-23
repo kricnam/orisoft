@@ -4,6 +4,8 @@
 ||TD-SCDMA||约330kpbs||？||
 ||CDMA2000||约1Mkbps||200Kbps||
 ||WCDMA||约100～500kpbs||约70kbps||
+
+
 {{{
 
 WCDMA# time wget http:///tmp/a.pdf ; rm a.pdf
@@ -38,5 +40,9 @@ sys	0m 0.48s
 real	0m 12.55s
 user	0m 0.10s
 sys	0m 0.71s
+
+real	0m 11.60s
+user	0m 0.06s
+sys	0m 0.60s
 
 }}}
