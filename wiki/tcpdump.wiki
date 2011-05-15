@@ -1,5 +1,5 @@
 #summary TCPDUMP4.1.1移植，目标机器ARM920t
-_编译前，请确认交叉编译器arm-none-linux-gnueabi-gcc在可执行文件的搜索路径中_
+_*编译前，请确认交叉编译器arm-none-linux-gnueabi-gcc在可执行文件的搜索路径中*_
 
 
 
