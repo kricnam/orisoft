@@ -8,7 +8,9 @@
 = Details =
 如果用SqlLite,以下和数据库相关部分可以不执行
 
+{{{
     sudo apt-get install mysql-server
+
     sudo apt-get install phpmyadmin
     sudo apt-get install redmine redmine-mysql
     打开phpmyadmin，删除默认生成的redmine_default数据库中的所有数据表。这是因为默认的数据库编码不是utf8，会造成中文乱码的问题。我们需要先删除，然后按下面的步骤重新配置
@@ -22,6 +24,7 @@
     sudo service apache2 restart，打开http://localhost/redmine 即可以访问redmine。
     在中文环境下redmine的一些字体非常小，看不清楚，这是一个国外软件经常会出现的一个bug，这是因为中文字体在1em以下看不清楚，我们只要修改相应的css文件即可。
     打开/var/www/redmine/stylesheets/application.css，找到font-size: 0.9em和font-size: 0.8em，全部替换为font-size: 1em，就可以达到完美的效果了。
+}}}
 
 最近版本控制主機換機器，就把原本的資料備份出來，由於新版的Bitnami的redmine已經升級，
 
